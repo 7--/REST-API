@@ -8,9 +8,12 @@
 <span class="{{active}}" ng-click="$event.preventDefault()">
 
   <a href="#" class="home" ng-click="active='home'" >Home</a>
-  <a href="#" class="projects" ng-click="active='projects'">Projects</a>
+  <a href="#" class="search" ng-click="active='search'">Search</a>
 
 </span> 
-<p ng-hide="active">Please click a menu item</p>
- <p ng-show="active='home'">You chose {{active}}</p>
-<phone-list></phone-list>
+<div ng-switch on="active">
+  <p ng-hide="active">Please click a menu item</p>
+  <p  ng-switch-when="home">Here are some angularjs examples</p>
+  <p  ng-switch-when="search"><phone-list></phone-list></p>
+</div>
+
