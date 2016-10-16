@@ -1,0 +1,16 @@
+﻿
+@{
+  ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<span class="{{active}}" ng-click="$event.preventDefault()">
+
+  <a href="#" class="home" ng-click="active='home'" >Home</a>
+  <a href="#" class="projects" ng-click="active='projects'">Projects</a>
+
+</span> 
+<p ng-hide="active">Please click a menu item</p>
+ <p ng-show="active='home'">You chose {{active}}</p>
+<phone-list></phone-list>
